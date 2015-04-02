@@ -287,6 +287,20 @@ module Qadmin
       html.html_safe
     end
 
+    def labeled_show_column_value(raw_value, with_value: nil)
+      if raw_value.blank? && raw_value != false
+        nil
+      elsif raw_value.is_a?(Array) || raw_value.is_a?(Hash)
+        raw_value.inspect
+      elsif with_value && with_value.is_a?(Proc)
+        with_value.call(raw_value)
+      elsif raw_value.is_a?(ActiveRecord::Base)
+        raw_value.to_s
+      else
+        raw_value
+      end
+    end
+
     def labeled_show_paperclip_attachment(object, method, options = {})
       value = if object.send("#{method}?")
         # has attachment

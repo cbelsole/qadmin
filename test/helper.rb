@@ -4,9 +4,12 @@ $LOAD_PATH.unshift("#{dir}/../lib")
 require "rubygems"
 require "stringio"
 require "minitest/autorun"
-require "mocha"
+require 'mocha/mini_test'
+# require "mocha"
 require "shoulda"
 require "active_record"
+require 'action_view'
+require 'action_controller'
 require "qadmin"
 
 class MockController

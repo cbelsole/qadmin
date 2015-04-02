@@ -1,0 +1,23 @@
+<% object ||= nil %>
+<% method ||= nil %>
+<% label ||= nil %>
+
+<% raw_value ||= nil %>
+<% with_value ||= nil %>
+<% path_helper ||= nil %>
+<% namespace ||= nil %>
+
+<p>
+  <%= label(object, method, label) %>
+  <span class="show_value">
+    <% if value = labeled_show_column_value(raw_value, with_value: with_value) %>
+      <% if raw_value.is_a?(ActiveRecord::Base)%>
+        <%= link_to(h(value), path_helper ? send(path_helper, raw_value) : [namespace, raw_value].compact) %>
+      <% else %>
+        <%= h(value)%>
+      <% end %>
+    <% else %>
+      <em>blank</em>
+    <% end %>
+  </span>
+</p>

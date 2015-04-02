@@ -1,0 +1,19 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.2.1'
+gem 'sqlite3'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
+gem 'qadmin', path: '../../../qadmin'
+# Needed to bakport gem 'dynamic_form'
+# http://stackoverflow.com/questions/3025057/rails-error-messages-helper
+gem 'dynamic_form'
+
+group :development, :test do
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'jazz_hands'
+end
+

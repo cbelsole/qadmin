@@ -67,12 +67,7 @@ Gem::Specification.new do |s|
     "rails_generators/qadmin/templates/images/icon_sort.png",
     "rails_generators/qadmin/templates/images/indicator_medium.gif",
     "rails_generators/qadmin/templates/layout.html.erb",
-    "rails_generators/qadmin/templates/style.css",
-    "test/test_generator_helper.rb",
-    "test/test_helper.rb",
-    "test/test_qadmin_configuration.rb",
-    "test/test_qadmin_controller.rb",
-    "test/test_qadmin_generator.rb"
+    "rails_generators/qadmin/templates/style.css"
   ]
   s.homepage = "http://github.com/quirkey/qadmin"
   s.post_install_message = "PostInstall.txt"
